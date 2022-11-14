@@ -33,14 +33,14 @@
             this.buttonSettings = new System.Windows.Forms.Button();
             this.tableLayoutInfo = new System.Windows.Forms.TableLayoutPanel();
             this.tableLayoutInfo1 = new System.Windows.Forms.TableLayoutPanel();
-            this.label2 = new System.Windows.Forms.Label();
+            this.labelDegree = new System.Windows.Forms.Label();
             this.tableLayoutPanel6 = new System.Windows.Forms.TableLayoutPanel();
             this.labelDescription = new System.Windows.Forms.Label();
             this.labelMain = new System.Windows.Forms.Label();
-            this.pictureBox1 = new System.Windows.Forms.PictureBox();
+            this.pictureBox = new System.Windows.Forms.PictureBox();
             this.tableLayoutPanel1 = new System.Windows.Forms.TableLayoutPanel();
-            this.label3 = new System.Windows.Forms.Label();
-            this.label1 = new System.Windows.Forms.Label();
+            this.labelTime = new System.Windows.Forms.Label();
+            this.labelWeek = new System.Windows.Forms.Label();
             this.tableLayoutPanel3 = new System.Windows.Forms.TableLayoutPanel();
             this.tableLayoutPanel5 = new System.Windows.Forms.TableLayoutPanel();
             this.labelWindDegree = new System.Windows.Forms.Label();
@@ -58,13 +58,13 @@
             this.labelHumidityValue = new System.Windows.Forms.Label();
             this.tableLayoutPanel2 = new System.Windows.Forms.TableLayoutPanel();
             this.pictureBox2 = new System.Windows.Forms.PictureBox();
-            this.label4 = new System.Windows.Forms.Label();
+            this.labelLoc = new System.Windows.Forms.Label();
             this.label5 = new System.Windows.Forms.Label();
             this.tableLayoutPanel.SuspendLayout();
             this.tableLayoutInfo.SuspendLayout();
             this.tableLayoutInfo1.SuspendLayout();
             this.tableLayoutPanel6.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox)).BeginInit();
             this.tableLayoutPanel1.SuspendLayout();
             this.tableLayoutPanel3.SuspendLayout();
             this.tableLayoutPanel5.SuspendLayout();
@@ -135,7 +135,7 @@
             this.tableLayoutInfo1.ColumnCount = 2;
             this.tableLayoutInfo1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 50F));
             this.tableLayoutInfo1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 50F));
-            this.tableLayoutInfo1.Controls.Add(this.label2, 0, 0);
+            this.tableLayoutInfo1.Controls.Add(this.labelDegree, 0, 0);
             this.tableLayoutInfo1.Controls.Add(this.tableLayoutPanel6, 1, 0);
             this.tableLayoutInfo1.Dock = System.Windows.Forms.DockStyle.Fill;
             this.tableLayoutInfo1.Location = new System.Drawing.Point(0, 79);
@@ -146,19 +146,19 @@
             this.tableLayoutInfo1.Size = new System.Drawing.Size(583, 200);
             this.tableLayoutInfo1.TabIndex = 1;
             // 
-            // label2
+            // labelDegree
             // 
-            this.label2.AutoSize = true;
-            this.label2.BackColor = System.Drawing.Color.Transparent;
-            this.label2.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 48F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
-            this.label2.ForeColor = System.Drawing.Color.White;
-            this.label2.Location = new System.Drawing.Point(3, 0);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(285, 200);
-            this.label2.TabIndex = 1;
-            this.label2.Text = "16°C";
-            this.label2.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.labelDegree.AutoSize = true;
+            this.labelDegree.BackColor = System.Drawing.Color.Transparent;
+            this.labelDegree.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.labelDegree.Font = new System.Drawing.Font("Microsoft Sans Serif", 48F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
+            this.labelDegree.ForeColor = System.Drawing.Color.White;
+            this.labelDegree.Location = new System.Drawing.Point(3, 0);
+            this.labelDegree.Name = "labelDegree";
+            this.labelDegree.Size = new System.Drawing.Size(285, 200);
+            this.labelDegree.TabIndex = 1;
+            this.labelDegree.Text = "16°C";
+            this.labelDegree.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // tableLayoutPanel6
             // 
@@ -166,7 +166,7 @@
             this.tableLayoutPanel6.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 100F));
             this.tableLayoutPanel6.Controls.Add(this.labelDescription, 0, 2);
             this.tableLayoutPanel6.Controls.Add(this.labelMain, 0, 1);
-            this.tableLayoutPanel6.Controls.Add(this.pictureBox1, 0, 0);
+            this.tableLayoutPanel6.Controls.Add(this.pictureBox, 0, 0);
             this.tableLayoutPanel6.Dock = System.Windows.Forms.DockStyle.Fill;
             this.tableLayoutPanel6.Location = new System.Drawing.Point(294, 3);
             this.tableLayoutPanel6.Name = "tableLayoutPanel6";
@@ -207,24 +207,24 @@
             this.labelMain.Text = "Main";
             this.labelMain.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
-            // pictureBox1
+            // pictureBox
             // 
-            this.pictureBox1.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.pictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox1.Image")));
-            this.pictureBox1.Location = new System.Drawing.Point(3, 3);
-            this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(280, 128);
-            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.pictureBox1.TabIndex = 4;
-            this.pictureBox1.TabStop = false;
+            this.pictureBox.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.pictureBox.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox.Image")));
+            this.pictureBox.Location = new System.Drawing.Point(3, 3);
+            this.pictureBox.Name = "pictureBox";
+            this.pictureBox.Size = new System.Drawing.Size(280, 128);
+            this.pictureBox.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.pictureBox.TabIndex = 4;
+            this.pictureBox.TabStop = false;
             // 
             // tableLayoutPanel1
             // 
             this.tableLayoutPanel1.ColumnCount = 2;
             this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 50F));
             this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 50F));
-            this.tableLayoutPanel1.Controls.Add(this.label3, 1, 0);
-            this.tableLayoutPanel1.Controls.Add(this.label1, 0, 0);
+            this.tableLayoutPanel1.Controls.Add(this.labelTime, 1, 0);
+            this.tableLayoutPanel1.Controls.Add(this.labelWeek, 0, 0);
             this.tableLayoutPanel1.Dock = System.Windows.Forms.DockStyle.Fill;
             this.tableLayoutPanel1.Location = new System.Drawing.Point(0, 0);
             this.tableLayoutPanel1.Margin = new System.Windows.Forms.Padding(0);
@@ -234,37 +234,37 @@
             this.tableLayoutPanel1.Size = new System.Drawing.Size(583, 79);
             this.tableLayoutPanel1.TabIndex = 2;
             // 
-            // label3
+            // labelTime
             // 
-            this.label3.AutoSize = true;
-            this.label3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(30)))), ((int)(((byte)(30)))), ((int)(((byte)(30)))));
-            this.label3.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 21.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
-            this.label3.ForeColor = System.Drawing.Color.White;
-            this.label3.Location = new System.Drawing.Point(291, 0);
-            this.label3.Margin = new System.Windows.Forms.Padding(0);
-            this.label3.Name = "label3";
-            this.label3.Padding = new System.Windows.Forms.Padding(0, 0, 30, 0);
-            this.label3.Size = new System.Drawing.Size(292, 79);
-            this.label3.TabIndex = 1;
-            this.label3.Text = "16:57";
-            this.label3.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.labelTime.AutoSize = true;
+            this.labelTime.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(30)))), ((int)(((byte)(30)))), ((int)(((byte)(30)))));
+            this.labelTime.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.labelTime.Font = new System.Drawing.Font("Microsoft Sans Serif", 21.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
+            this.labelTime.ForeColor = System.Drawing.Color.White;
+            this.labelTime.Location = new System.Drawing.Point(291, 0);
+            this.labelTime.Margin = new System.Windows.Forms.Padding(0);
+            this.labelTime.Name = "labelTime";
+            this.labelTime.Padding = new System.Windows.Forms.Padding(0, 0, 30, 0);
+            this.labelTime.Size = new System.Drawing.Size(292, 79);
+            this.labelTime.TabIndex = 1;
+            this.labelTime.Text = "16:57";
+            this.labelTime.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             // 
-            // label1
+            // labelWeek
             // 
-            this.label1.AutoSize = true;
-            this.label1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(30)))), ((int)(((byte)(30)))), ((int)(((byte)(30)))));
-            this.label1.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 26.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
-            this.label1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(247)))), ((int)(((byte)(147)))), ((int)(((byte)(39)))));
-            this.label1.Location = new System.Drawing.Point(0, 0);
-            this.label1.Margin = new System.Windows.Forms.Padding(0);
-            this.label1.Name = "label1";
-            this.label1.Padding = new System.Windows.Forms.Padding(30, 0, 0, 0);
-            this.label1.Size = new System.Drawing.Size(291, 79);
-            this.label1.TabIndex = 0;
-            this.label1.Text = "Monday";
-            this.label1.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.labelWeek.AutoSize = true;
+            this.labelWeek.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(30)))), ((int)(((byte)(30)))), ((int)(((byte)(30)))));
+            this.labelWeek.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.labelWeek.Font = new System.Drawing.Font("Microsoft Sans Serif", 26.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
+            this.labelWeek.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(247)))), ((int)(((byte)(147)))), ((int)(((byte)(39)))));
+            this.labelWeek.Location = new System.Drawing.Point(0, 0);
+            this.labelWeek.Margin = new System.Windows.Forms.Padding(0);
+            this.labelWeek.Name = "labelWeek";
+            this.labelWeek.Padding = new System.Windows.Forms.Padding(30, 0, 0, 0);
+            this.labelWeek.Size = new System.Drawing.Size(291, 79);
+            this.labelWeek.TabIndex = 0;
+            this.labelWeek.Text = "Monday";
+            this.labelWeek.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             // 
             // tableLayoutPanel3
             // 
@@ -508,7 +508,7 @@
             this.tableLayoutPanel2.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 30F));
             this.tableLayoutPanel2.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle());
             this.tableLayoutPanel2.Controls.Add(this.pictureBox2, 0, 0);
-            this.tableLayoutPanel2.Controls.Add(this.label4, 1, 0);
+            this.tableLayoutPanel2.Controls.Add(this.labelLoc, 1, 0);
             this.tableLayoutPanel2.Dock = System.Windows.Forms.DockStyle.Fill;
             this.tableLayoutPanel2.Location = new System.Drawing.Point(110, 3);
             this.tableLayoutPanel2.Margin = new System.Windows.Forms.Padding(30, 3, 30, 3);
@@ -529,19 +529,18 @@
             this.pictureBox2.TabIndex = 0;
             this.pictureBox2.TabStop = false;
             // 
-            // label4
+            // labelLoc
             // 
-            this.label4.AutoSize = true;
-            this.label4.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.label4.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
-            this.label4.ForeColor = System.Drawing.Color.White;
-            this.label4.Location = new System.Drawing.Point(33, 0);
-            this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(547, 39);
-            this.label4.TabIndex = 1;
-            this.label4.Text = "Warsaw, Poland";
-            this.label4.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.label4.Click += new System.EventHandler(this.label4_Click);
+            this.labelLoc.AutoSize = true;
+            this.labelLoc.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.labelLoc.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
+            this.labelLoc.ForeColor = System.Drawing.Color.White;
+            this.labelLoc.Location = new System.Drawing.Point(33, 0);
+            this.labelLoc.Name = "labelLoc";
+            this.labelLoc.Size = new System.Drawing.Size(547, 39);
+            this.labelLoc.TabIndex = 1;
+            this.labelLoc.Text = "Warsaw, Poland";
+            this.labelLoc.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             // 
             // label5
             // 
@@ -574,7 +573,7 @@
             this.tableLayoutInfo1.PerformLayout();
             this.tableLayoutPanel6.ResumeLayout(false);
             this.tableLayoutPanel6.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox)).EndInit();
             this.tableLayoutPanel1.ResumeLayout(false);
             this.tableLayoutPanel1.PerformLayout();
             this.tableLayoutPanel3.ResumeLayout(false);
@@ -594,13 +593,13 @@
         private System.Windows.Forms.Button buttonSettings;
         private System.Windows.Forms.TableLayoutPanel tableLayoutInfo;
         private System.Windows.Forms.TableLayoutPanel tableLayoutInfo1;
-        private System.Windows.Forms.Label label2;
+        private System.Windows.Forms.Label labelDegree;
         private System.Windows.Forms.TableLayoutPanel tableLayoutPanel1;
-        private System.Windows.Forms.Label label3;
-        private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.Label labelTime;
+        private System.Windows.Forms.Label labelWeek;
         private System.Windows.Forms.TableLayoutPanel tableLayoutPanel2;
         private System.Windows.Forms.PictureBox pictureBox2;
-        private System.Windows.Forms.Label label4;
+        private System.Windows.Forms.Label labelLoc;
         private System.Windows.Forms.TableLayoutPanel tableLayoutPanel3;
         private System.Windows.Forms.TableLayoutPanel tableLayoutPanel5;
         private System.Windows.Forms.TableLayoutPanel tableLayoutPanel4;
@@ -619,7 +618,7 @@
         private System.Windows.Forms.Label labelFeelLikeValue;
         private System.Windows.Forms.Label labelPressureValue;
         private System.Windows.Forms.Label labelHumidityValue;
-        private System.Windows.Forms.PictureBox pictureBox1;
+        private System.Windows.Forms.PictureBox pictureBox;
         private System.Windows.Forms.Label label5;
     }
 }

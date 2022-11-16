@@ -60,6 +60,7 @@
             this.pictureBox2 = new System.Windows.Forms.PictureBox();
             this.labelLoc = new System.Windows.Forms.Label();
             this.label5 = new System.Windows.Forms.Label();
+            this.backgroundWorker1 = new System.ComponentModel.BackgroundWorker();
             this.tableLayoutPanel.SuspendLayout();
             this.tableLayoutInfo.SuspendLayout();
             this.tableLayoutInfo1.SuspendLayout();
@@ -555,6 +556,12 @@
             this.label5.Text = "Created by Karol Wiśniewski";
             this.label5.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             // 
+            // backgroundWorker1
+            // 
+            this.backgroundWorker1.WorkerReportsProgress = true;
+            this.backgroundWorker1.DoWork += new System.ComponentModel.DoWorkEventHandler(this.backgroundWorker1_DoWork);
+            this.backgroundWorker1.ProgressChanged += new System.ComponentModel.ProgressChangedEventHandler(this.backgroundWorker1_ProgressChanged);
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -620,6 +627,7 @@
         private System.Windows.Forms.Label labelHumidityValue;
         private System.Windows.Forms.PictureBox pictureBox;
         private System.Windows.Forms.Label label5;
+        private System.ComponentModel.BackgroundWorker backgroundWorker1;
     }
 }
 

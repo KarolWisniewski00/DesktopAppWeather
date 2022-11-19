@@ -91,7 +91,7 @@
             this.tableLayoutPanel.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 10F));
             this.tableLayoutPanel.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 80F));
             this.tableLayoutPanel.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 10F));
-            this.tableLayoutPanel.Size = new System.Drawing.Size(804, 450);
+            this.tableLayoutPanel.Size = new System.Drawing.Size(804, 451);
             this.tableLayoutPanel.TabIndex = 1;
             // 
             // buttonSettings
@@ -110,6 +110,7 @@
             this.buttonSettings.Size = new System.Drawing.Size(30, 30);
             this.buttonSettings.TabIndex = 0;
             this.buttonSettings.UseVisualStyleBackColor = false;
+            this.buttonSettings.Click += new System.EventHandler(this.buttonSettings_Click);
             // 
             // tableLayoutInfo
             // 
@@ -315,7 +316,7 @@
             this.labelWindDegree.Name = "labelWindDegree";
             this.labelWindDegree.Size = new System.Drawing.Size(141, 24);
             this.labelWindDegree.TabIndex = 3;
-            this.labelWindDegree.Text = "Wind Degree";
+            this.labelWindDegree.Text = "Wind degree";
             this.labelWindDegree.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             // 
             // labelVisibility
@@ -551,7 +552,7 @@
             this.label5.Location = new System.Drawing.Point(110, 405);
             this.label5.Margin = new System.Windows.Forms.Padding(30, 0, 0, 0);
             this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(613, 45);
+            this.label5.Size = new System.Drawing.Size(613, 46);
             this.label5.TabIndex = 3;
             this.label5.Text = "Created by Karol Wiśniewski";
             this.label5.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
@@ -567,12 +568,14 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(13)))), ((int)(((byte)(13)))), ((int)(((byte)(13)))));
-            this.ClientSize = new System.Drawing.Size(804, 450);
+            this.ClientSize = new System.Drawing.Size(804, 451);
             this.Controls.Add(this.tableLayoutPanel);
             this.Cursor = System.Windows.Forms.Cursors.Default;
-            this.MinimumSize = new System.Drawing.Size(820, 489);
+            this.MinimumSize = new System.Drawing.Size(820, 490);
             this.Name = "Form1";
-            this.Text = "Form1";
+            this.ShowIcon = false;
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
+            this.Text = "Weather";
             this.tableLayoutPanel.ResumeLayout(false);
             this.tableLayoutPanel.PerformLayout();
             this.tableLayoutInfo.ResumeLayout(false);

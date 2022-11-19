@@ -20,13 +20,29 @@ namespace Weather
         public string Units = "Metric";
         public string UnitsValue = "&units=metric";
         public string UnitsTempValue = "°C";
+        public string path = @"Save.txt";
         public DateTime dtDateTime;
         public Form1()
         {
             InitializeComponent();
+            ReadFile();
             SetUpDefault();
             backgroundWorker1.RunWorkerAsync();
             instance = this;
+        }
+        private void ReadFile()
+        {
+            StreamReader streamReader = File.OpenText(path);
+            keyAPI = streamReader.ReadLine();
+            lat = streamReader.ReadLine();
+            lon = streamReader.ReadLine();
+            location = streamReader.ReadLine();
+            language = streamReader.ReadLine();
+            languageValue = streamReader.ReadLine();
+            Units = streamReader.ReadLine();
+            UnitsValue = streamReader.ReadLine();
+            UnitsTempValue = streamReader.ReadLine();
+            streamReader.Close();
         }
         public string GetDataFromAPI(string URL)
         {
@@ -178,25 +194,25 @@ namespace Weather
             dtDateTime = dtDateTime.AddSeconds(Int16.Parse(doc.SelectSingleNode("//timezone").InnerText));
 
             //Set up details
-            labelMain.Text = doc.SelectSingleNode("//clouds").Attributes["name"].Value;
-            labelDescription.Text = doc.SelectSingleNode("//weather").Attributes["value"].Value;
-            labelDegree.Text = doc.SelectSingleNode("//temperature").Attributes["value"].Value + UnitsTempValue;
-            labelFeelLikeValue.Text = doc.SelectSingleNode("//feels_like").Attributes["value"].Value + UnitsTempValue;
             labelPressureValue.Text = doc.SelectSingleNode("//pressure").Attributes["value"].Value + doc.SelectSingleNode("//pressure").Attributes["unit"].Value;
             labelHumidityValue.Text = doc.SelectSingleNode("//humidity").Attributes["value"].Value + doc.SelectSingleNode("//humidity").Attributes["unit"].Value;
+            labelLoc.Text = doc.SelectSingleNode("//city").Attributes["name"].Value + ", " + doc.SelectSingleNode("//country").InnerText;
+            labelFeelLikeValue.Text = doc.SelectSingleNode("//feels_like").Attributes["value"].Value + UnitsTempValue;
+            labelDegree.Text = doc.SelectSingleNode("//temperature").Attributes["value"].Value + UnitsTempValue;
             labelVisibilityValue.Text = doc.SelectSingleNode("//visibility").Attributes["value"].Value + "m";
+            labelDescription.Text = doc.SelectSingleNode("//weather").Attributes["value"].Value;
+            labelMain.Text = doc.SelectSingleNode("//clouds").Attributes["name"].Value;
+            labelTime.Text = dtDateTime.ToString("HH:mm:ss");
             try
             {
-                labelWindDegreeValue.Text = doc.SelectSingleNode("//direction").Attributes["code"].Value;
                 labelWindSpeedValue.Text = doc.SelectSingleNode("//speed").Attributes["value"].Value + doc.SelectSingleNode("//speed").Attributes["unit"].Value;
+                labelWindDegreeValue.Text = doc.SelectSingleNode("//direction").Attributes["code"].Value;
             }
             catch
             {
                 labelWindDegreeValue.Text = "-";
                 labelWindSpeedValue.Text = "-";
             }
-            labelTime.Text = dtDateTime.ToString("HH:mm:ss");
-            labelLoc.Text = doc.SelectSingleNode("//city").Attributes["name"].Value + ", " + doc.SelectSingleNode("//country").InnerText;
 
             SetUpIcon(doc);
             SetUpLanguage();

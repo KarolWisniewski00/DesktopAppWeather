@@ -1,5 +1,6 @@
 ﻿using Newtonsoft.Json;
 using System;
+using System.IO;
 using System.Windows.Forms;
 
 namespace Weather
@@ -69,9 +70,33 @@ namespace Weather
                 Form1.instance.UnitsValue = "&units=imperial";
                 Form1.instance.UnitsTempValue = "°F";
             }
-
+            SaveFile();
             Form1.instance.SetUpDefault();
             this.Close();
+        }
+        
+        private void SaveFile()
+        {
+            StreamWriter streamWriter;
+
+            if (!File.Exists(Form1.instance.path))
+            {
+                streamWriter = File.CreateText(Form1.instance.path);
+            }
+            else
+            {
+                streamWriter = new StreamWriter(Form1.instance.path);
+            }
+            streamWriter.WriteLine(Form1.instance.keyAPI);
+            streamWriter.WriteLine(Form1.instance.lat);
+            streamWriter.WriteLine(Form1.instance.lon);
+            streamWriter.WriteLine(Form1.instance.location);
+            streamWriter.WriteLine(Form1.instance.language);
+            streamWriter.WriteLine(Form1.instance.languageValue);
+            streamWriter.WriteLine(Form1.instance.Units);
+            streamWriter.WriteLine(Form1.instance.UnitsValue);
+            streamWriter.WriteLine(Form1.instance.UnitsTempValue);
+            streamWriter.Close();
         }
     }
 }

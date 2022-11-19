@@ -106,6 +106,7 @@
     <Compile Include="Properties\Resources.Designer.cs">
       <AutoGen>True</AutoGen>
       <DependentUpon>Resources.resx</DependentUpon>
+      <DesignTime>True</DesignTime>
     </Compile>
     <None Include="packages.config" />
     <None Include="Properties\Settings.settings">
@@ -120,6 +121,45 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Assets\200.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Assets\221.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Assets\300.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Assets\500.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Assets\511.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Assets\600.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Assets\700.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Assets\800d.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Assets\800n.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Assets\801d.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Assets\801n.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Assets\802.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Assets\803.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

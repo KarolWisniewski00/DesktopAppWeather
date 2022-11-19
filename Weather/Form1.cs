@@ -1,15 +1,8 @@
 ﻿using System;
-using System.Collections;
-using System.Collections.Generic;
 using System.ComponentModel;
-using System.Data;
-using System.Drawing;
 using System.IO;
-using System.Linq;
 using System.Net;
-using System.Text;
 using System.Threading;
-using System.Threading.Tasks;
 using System.Windows.Forms;
 using System.Xml;
 
@@ -96,6 +89,83 @@ namespace Weather
                 }
             }
         }
+        private void SetUpIcon(XmlDocument doc)
+        {
+            int number = Int16.Parse(doc.SelectSingleNode("//weather").Attributes["number"].Value);
+            //Thunderstorm
+            if ((number >= 200) & (number < 221))
+            {
+                pictureBox.Image = Properties.Resources._200;
+            }
+            else if ((number > 221) & (number < 300))
+            {
+                pictureBox.Image = Properties.Resources._200;
+            }
+            else if (number == 221)
+            {
+                pictureBox.Image = Properties.Resources._221;
+            }
+            //Drizzle
+            else if ((number >= 300) & (number < 400))
+            {
+                pictureBox.Image = Properties.Resources._300;
+            }
+            //Rain
+            if ((number >= 500) & (number < 511))
+            {
+                pictureBox.Image = Properties.Resources._500;
+            }
+            else if ((number > 511) & (number < 600))
+            {
+                pictureBox.Image = Properties.Resources._500;
+            }
+            else if (number == 511)
+            {
+                pictureBox.Image = Properties.Resources._511;
+            }
+            //Snow
+            else if ((number >= 600) & (number < 700))
+            {
+                pictureBox.Image = Properties.Resources._600;
+            }
+            //Atmosphere
+            else if ((number >= 700) & (number < 800))
+            {
+                pictureBox.Image = Properties.Resources._700;
+            }
+            //Clear
+            else if (number == 800)
+            {
+                if (doc.SelectSingleNode("//weather").Attributes["number"].Value == "01d")
+                {
+                    pictureBox.Image = Properties.Resources._800d;
+                }
+                else
+                {
+                    pictureBox.Image = Properties.Resources._800n;
+                }
+            }
+            //Clouds
+            else if (number == 801)
+            {
+                if (doc.SelectSingleNode("//weather").Attributes["number"].Value == "02d")
+                {
+                    pictureBox.Image = Properties.Resources._801d;
+                }
+                else
+                {
+                    pictureBox.Image = Properties.Resources._801n;
+                }
+            }
+            else if (number == 802)
+            {
+                pictureBox.Image = Properties.Resources._802;
+            }
+            else if (number >= 803)
+            {
+                pictureBox.Image = Properties.Resources._803;
+            }
+        }
         public void SetUpDefault()
         {
             //Get data
@@ -115,11 +185,20 @@ namespace Weather
             labelPressureValue.Text = doc.SelectSingleNode("//pressure").Attributes["value"].Value + doc.SelectSingleNode("//pressure").Attributes["unit"].Value;
             labelHumidityValue.Text = doc.SelectSingleNode("//humidity").Attributes["value"].Value + doc.SelectSingleNode("//humidity").Attributes["unit"].Value;
             labelVisibilityValue.Text = doc.SelectSingleNode("//visibility").Attributes["value"].Value + "m";
-            labelWindSpeedValue.Text = doc.SelectSingleNode("//speed").Attributes["value"].Value + doc.SelectSingleNode("//speed").Attributes["unit"].Value;
-            labelWindDegreeValue.Text = doc.SelectSingleNode("//direction").Attributes["code"].Value;
+            try
+            {
+                labelWindDegreeValue.Text = doc.SelectSingleNode("//direction").Attributes["code"].Value;
+                labelWindSpeedValue.Text = doc.SelectSingleNode("//speed").Attributes["value"].Value + doc.SelectSingleNode("//speed").Attributes["unit"].Value;
+            }
+            catch
+            {
+                labelWindDegreeValue.Text = "-";
+                labelWindSpeedValue.Text = "-";
+            }
             labelTime.Text = dtDateTime.ToString("HH:mm:ss");
             labelLoc.Text = doc.SelectSingleNode("//city").Attributes["name"].Value + ", " + doc.SelectSingleNode("//country").InnerText;
 
+            SetUpIcon(doc);
             SetUpLanguage();
         }
         private void backgroundWorker1_DoWork(object sender, DoWorkEventArgs e)
